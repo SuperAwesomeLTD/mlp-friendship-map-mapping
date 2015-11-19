@@ -241,7 +241,7 @@ function transform(map) {
     var result = {};
     for(var name in mapping) {
         if(mapping.hasOwnProperty(name)) {
-            result[mapping[name]] = (result[mapping[name]] || 0) + map[name].count;
+            result[mapping[name]] = (result[mapping[name]] || 0) + (map[name] ? map[name].count : 0);
         }
     }
     return result;

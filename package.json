@@ -1,6 +1,6 @@
 {
   "name": "mlp-friendship-map-mapping",
   "description": "Map the output of saAppApi.users.getUsersMap() to the lis of counties we are using for MLP",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "index.js"
 }
