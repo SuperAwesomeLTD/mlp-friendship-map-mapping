@@ -1,14 +1,13 @@
 # My Little Pony Friendship Map Mapping
 
-Transform the output of `saAppApi.users.getUsersMap()`
+Transform the output of the SDK's `app.user.getMap()`
 
-from [ISO 3166-2:GB](https://en.wikipedia.org/wiki/ISO_3166-2:GB)
+from the first part of UK postcodes (https://www.townscountiespostcodes.co.uk/postcodes-in-uk/)
 ```javascript
 {
-    'GB-CON': {name: "Cornwall", count: 91},
-    'GB-COV': {name: "Coventry", count: 16},
-    'GB-CRF': {name: "Cardiff", count: 42},
-    'GB-CRY': {name: "Croydon", count: 62},
+    w1t: 1,
+    gu25: 3,
+    wc1v: 1,
     // ...
 }
 ```
@@ -17,8 +16,8 @@ to [this list of counties](http://www.townscountiespostcodes.co.uk/counties-in-u
 
 ```javascript
 {
-    'Cornwall': 91,
-    'Gloucestershire': 123,
+    'London': 2,
+    'Surrey': 3,
     // ...
 }
 ```
@@ -35,7 +34,7 @@ var mlpFriendshipMapMapping = require('mlp-friendship-map-mapping');
 
 // ...
 
-saAppApi.users.getUsersMap()
+saAppSdk.app.user.getMap()
     .then(mlpFriendshipMapMapping)
     .then(function(map) {
         // ...
